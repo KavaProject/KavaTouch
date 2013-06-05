@@ -1,0 +1,16 @@
+{
+    "id": "retina-ipad",
+    "flipYAxis": true,
+    "useIPadTheme": false,
+    "deviceModifiers": ["~ipad", ""],
+    "imageScaleModifiers": [
+        {
+            name: "@2x",
+            scale: 2
+        },
+        {
+            name: "",
+            scale: 1
+        }
+    ]
+}

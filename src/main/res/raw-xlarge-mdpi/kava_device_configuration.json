@@ -1,0 +1,12 @@
+{
+    "id": "ipad",
+    "flipYAxis": true,
+    "useIPadTheme": false,
+    "deviceModifiers": ["~ipad", ""],
+    "imageScaleModifiers": [
+        {
+            name: "",
+            scale: 1
+        }
+    ]
+}

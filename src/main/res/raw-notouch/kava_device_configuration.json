@@ -1,0 +1,12 @@
+{
+    "id": "pc",
+    "flipYAxis": false,
+    "useIPadTheme": true,
+    "deviceModifiers": ["~mac", ""],
+    "imageScaleModifiers": [
+        {
+            name: "",
+            scale: 1
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+Version 0.1  (June 2013)
+-----------------------
+
+	* Implemented:
+		* Run loops with sources, observers and timers
+      		* 2D graphics
+      		* single touch detection
+		* wrapped Android views
+
+   	* One demo application runs:
+      		* Touches (no multi touch, no animations, NIB recreated in code)
+
+Known issues:
+
+   	* Too many to count.
