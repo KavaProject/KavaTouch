@@ -6,7 +6,7 @@ Kava Touch aims at providing a complete replacement for all Android classes that
 
 The Kava Touch framework is dual-licensed under Apache 2.0 and MIT terms.
 
-See [COPYRIGHT], [LICENSE-APACHE] and [LICENSE-MIT] for details. See [AUTHORS] for a list of contributors.
+See [COPYRIGHT](COPYRIGHT), [LICENSE-APACHE](LICENSE-APACHE) and [LICENSE-MIT](LICENSE-MIT) for details. See [AUTHORS](AUTHORS) for a list of contributors.
 
 ## News
 
@@ -18,7 +18,7 @@ For now, see the sample projects in [KavaTouchSamples](https://github.com/KavaPr
 
 ## Architecture
 
-The current implementation runs in a separate thread and renders to a custom *SurfaceView*. Applications programmed with Kava Touch typically contain one Android *Activity* that sets up this *SurfaceView* with an application delegate. The delegate will be used to initialize the Kava Touch environment upon loading. Kava Touch *UIView*s reuse the drawing logic of their Android equivalent to achieve the look of native Android applications.
+The current implementation runs in a separate thread and renders to a custom *SurfaceView*. Applications programmed with Kava Touch typically contain one Android *Activity* that sets up this *SurfaceView* with an application delegate. The delegate will be used to initialize the Kava Touch environment upon loading. Kava Touch *UIView* s reuse the drawing logic of their Android equivalent to achieve the look of native Android applications.
 
 ## Target Audience
 
@@ -27,7 +27,7 @@ Kava Touch will (once version 1.0 is reached) be a good alternative for programm
 ## Building
 
 Building requires an Android platform version 17 SDK, the minimum runtime platform version for deployment is version 10. To run the instrumentation tests using Gradle, make sure an Android device is connected and issue gradle's connectedInstrumentTest command (Replace the device IP and the Android SDK install location):
-```bash
+```
 adb connect 192.168.0.200
 export ANDROID_HOME=/Applications/android-sdk-macosx/; ./gradlew connectedInstrumentTest
 ```
