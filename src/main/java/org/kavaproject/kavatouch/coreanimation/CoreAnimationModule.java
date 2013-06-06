@@ -10,10 +10,10 @@
 package org.kavaproject.kavatouch.coreanimation;
 
 import org.kavaproject.kavatouch.internal.Module;
-import com.google.inject.Provides;
+import org.kavaproject.kavatouch.util.inject.Provides;
 import org.kavaproject.kavatouch.uikit.UIColorFactory;
 
-import javax.inject.Singleton;
+import org.kavaproject.kavatouch.util.inject.Singleton;
 
 @Module
 public class CoreAnimationModule {

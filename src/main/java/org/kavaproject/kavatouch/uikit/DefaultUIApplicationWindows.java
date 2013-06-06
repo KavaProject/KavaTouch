@@ -9,7 +9,7 @@
 
 package org.kavaproject.kavatouch.uikit;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
 

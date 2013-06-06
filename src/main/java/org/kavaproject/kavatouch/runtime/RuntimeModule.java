@@ -10,10 +10,10 @@
 package org.kavaproject.kavatouch.runtime;
 
 import org.kavaproject.kavatouch.internal.Module;
-import com.google.inject.Provides;
+import org.kavaproject.kavatouch.util.inject.Provides;
 import org.kavaproject.kavatouch.foundation.*;
 
-import javax.inject.Singleton;
+import org.kavaproject.kavatouch.util.inject.Singleton;
 
 @Module
 public class RuntimeModule {

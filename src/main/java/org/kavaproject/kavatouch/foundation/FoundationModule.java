@@ -10,12 +10,12 @@
 package org.kavaproject.kavatouch.foundation;
 
 import org.kavaproject.kavatouch.internal.Module;
-import com.google.inject.Provides;
+import org.kavaproject.kavatouch.util.inject.Provides;
 import org.kavaproject.kavatouch.runtime.MethodDispatcher;
 import org.kavaproject.kavatouch.runtime.MethodPerformer;
 import org.kavaproject.kavatouch.runtime.MethodSignatureService;
 
-import javax.inject.Singleton;
+import org.kavaproject.kavatouch.util.inject.Singleton;
 
 @Module
 public class FoundationModule {

@@ -16,7 +16,7 @@ import org.kavaproject.kavatouch.runtime.MethodResolver;
 import org.kavaproject.kavatouch.uikit.staging.UIImageViewAppearanceProxy;
 import org.kavaproject.kavatouch.util.NotImplementedException;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 
 public class DefaultUIImageViewFactory extends DefaultUIViewFactory implements UIImageViewFactory {
     private final UIImageGraphics mUIImageGraphics;

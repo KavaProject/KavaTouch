@@ -12,7 +12,7 @@ package org.kavaproject.kavatouch.uikit;
 import org.kavaproject.kavatouch.runtime.MethodPerformer;
 import org.kavaproject.kavatouch.runtime.MethodResolver;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 
 public class DefaultUIApplicationFactory extends SimpleUIResponderFactory implements UIApplicationFactory {
     private final UIDevice mCurrentUIDevice;

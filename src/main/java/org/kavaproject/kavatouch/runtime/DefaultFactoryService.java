@@ -14,7 +14,7 @@ import org.kavaproject.kavatouch.foundation.KeyedArchiver;
 import org.kavaproject.kavatouch.foundation.staging.Proxy;
 import org.kavaproject.kavatouch.util.NotImplementedException;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 import java.util.List;
 
 public class DefaultFactoryService implements FactoryService {

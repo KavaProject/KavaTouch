@@ -10,7 +10,7 @@
 package org.kavaproject.kavatouch.runtime;
 
 import org.kavaproject.kavatouch.internal.Module;
-import com.google.inject.Provides;
+import org.kavaproject.kavatouch.util.inject.Provides;
 
 @Module
 public class PetAndCatModule {

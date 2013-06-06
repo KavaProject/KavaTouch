@@ -11,7 +11,7 @@ package org.kavaproject.kavatouch.foundation;
 
 import org.kavaproject.kavatouch.runtime.MethodDispatcher;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 
 public class DefaultInvocationFactory implements InvocationFactory {
     private final MethodDispatcher mMethodDispatcher;

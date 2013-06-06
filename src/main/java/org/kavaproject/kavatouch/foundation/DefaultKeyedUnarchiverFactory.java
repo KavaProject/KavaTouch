@@ -12,7 +12,7 @@ package org.kavaproject.kavatouch.foundation;
 import org.kavaproject.kavatouch.runtime.Factory;
 import org.kavaproject.kavatouch.util.NotImplementedException;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 import java.nio.ByteBuffer;
 
 public class DefaultKeyedUnarchiverFactory extends CoderBaseFactory implements KeyedUnarchiverFactory {

@@ -22,7 +22,7 @@ import org.kavaproject.kavatouch.uikit.staging.UIViewAnimationTransition;
 import org.kavaproject.kavatouch.uikit.staging.UIViewAppearanceProxy;
 import org.kavaproject.kavatouch.util.NotImplementedException;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 
 public class DefaultUIViewFactory extends SimpleUIResponderFactory implements UIViewFactory {
     private final AnimationLayerFactory mAnimationLayerFactory;

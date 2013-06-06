@@ -16,7 +16,7 @@ import org.kavaproject.kavatouch.foundation.Coder;
 import org.kavaproject.kavatouch.uikit.staging.ImageColor;
 import org.kavaproject.kavatouch.util.NotImplementedException;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 
 import static org.kavaproject.kavatouch.coregraphics.GraphicsColorSpace.createDeviceRGB;
 

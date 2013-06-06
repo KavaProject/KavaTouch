@@ -11,7 +11,7 @@ package org.kavaproject.kavatouch.uikit;
 
 import org.kavaproject.kavatouch.coregraphics.*;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 
 import static org.kavaproject.kavatouch.coregraphics.GraphicsColorSpace.createDeviceRGB;
 

@@ -11,7 +11,7 @@ package org.kavaproject.kavatouch.uikit;
 
 import org.kavaproject.kavatouch.coregraphics.GraphicsSize;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 
 public class DefaultUIScreenModeFactory implements UIScreenModeFactory {
     @Inject

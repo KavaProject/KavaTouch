@@ -18,7 +18,7 @@ import org.kavaproject.kavatouch.foundation.staging.StringEncoding;
 import org.kavaproject.kavatouch.util.NotImplementedException;
 import org.kavaproject.kavatouch.util.OutArg;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 import java.io.File;
 import java.nio.ByteBuffer;
 import java.util.List;

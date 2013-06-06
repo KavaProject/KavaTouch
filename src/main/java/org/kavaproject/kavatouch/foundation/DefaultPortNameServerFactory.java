@@ -9,7 +9,7 @@
 
 package org.kavaproject.kavatouch.foundation;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 
 public class DefaultPortNameServerFactory implements PortNameServerFactory {
     private final PortNameServer mSystemDefaultPortNameServer = new DefaultPortNameServer(this);

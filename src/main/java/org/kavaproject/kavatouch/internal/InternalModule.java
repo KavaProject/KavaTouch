@@ -9,17 +9,17 @@
 
 package org.kavaproject.kavatouch.internal;
 
-import com.google.inject.Provides;
+import org.kavaproject.kavatouch.util.inject.Provides;
 import org.kavaproject.kavatouch.DeviceHandle;
 import org.kavaproject.kavatouch.uikit.UIApplication;
 import org.kavaproject.kavatouch.uikit.UIEventFactory;
 import org.kavaproject.kavatouch.uikit.UIScreen;
 import org.kavaproject.kavatouch.uikit.UITouchFactory;
 
-import javax.inject.Singleton;
+import org.kavaproject.kavatouch.util.inject.Singleton;
 
 @Module
-public final class InternalModule {
+public class InternalModule {
     @Provides
     @Singleton
     public SystemEventSource provideSystemEventSource(MotionEventHandler motionEventHandler,

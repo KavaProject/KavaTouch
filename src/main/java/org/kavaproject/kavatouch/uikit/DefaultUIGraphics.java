@@ -14,7 +14,7 @@ import org.kavaproject.kavatouch.coregraphics.*;
 import org.kavaproject.kavatouch.foundation.URL;
 import org.kavaproject.kavatouch.util.NotImplementedException;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 import java.util.Map;
 import java.util.Stack;
 

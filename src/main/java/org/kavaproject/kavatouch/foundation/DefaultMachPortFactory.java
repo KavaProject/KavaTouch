@@ -11,7 +11,7 @@ package org.kavaproject.kavatouch.foundation;
 
 import org.kavaproject.kavatouch.corefoundation.CoreMachPort;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 import java.util.EnumSet;
 
 public class DefaultMachPortFactory extends PortBaseFactory implements MachPortFactory {

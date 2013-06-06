@@ -12,7 +12,7 @@ package org.kavaproject.kavatouch.runtime;
 import org.kavaproject.kavatouch.foundation.*;
 import org.kavaproject.kavatouch.util.OutArg;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 
 public class DefaultMethodDispatcher implements MethodDispatcher {
     private final MethodResolver mMethodResolver;

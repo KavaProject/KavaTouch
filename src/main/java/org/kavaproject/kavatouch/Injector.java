@@ -16,10 +16,6 @@ import org.kavaproject.kavatouch.internal.*;
 import org.kavaproject.kavatouch.runtime.*;
 import org.kavaproject.kavatouch.uikit.*;
 
-/**
- * Important: Call CoreApplication.init() before using Injector. CoreFoundation classes aren't injected yet and have to
- * be set up manually.
- */
 public class Injector {
     private static Injector sInstance;
     private final RuntimeModule mRuntimeModule;

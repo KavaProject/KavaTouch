@@ -10,7 +10,7 @@
 package org.kavaproject.kavatouch.uikit;
 
 import org.kavaproject.kavatouch.internal.Module;
-import com.google.inject.Provides;
+import org.kavaproject.kavatouch.util.inject.Provides;
 import org.kavaproject.kavatouch.DeviceHandle;
 import org.kavaproject.kavatouch.coreanimation.AnimationLayerFactory;
 import org.kavaproject.kavatouch.foundation.BundleFactory;
@@ -21,7 +21,7 @@ import org.kavaproject.kavatouch.internal.SystemEventSource;
 import org.kavaproject.kavatouch.runtime.MethodPerformer;
 import org.kavaproject.kavatouch.runtime.MethodResolver;
 
-import javax.inject.Singleton;
+import org.kavaproject.kavatouch.util.inject.Singleton;
 
 @Module
 public class UIKitModule {

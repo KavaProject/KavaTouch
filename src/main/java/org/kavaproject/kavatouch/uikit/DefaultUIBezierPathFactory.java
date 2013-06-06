@@ -13,7 +13,7 @@ import org.kavaproject.kavatouch.coregraphics.*;
 import org.kavaproject.kavatouch.foundation.Coder;
 import org.kavaproject.kavatouch.util.NotImplementedException;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 
 public class DefaultUIBezierPathFactory implements UIBezierPathFactory {
     private final UIGraphics mUIGraphics;

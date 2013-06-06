@@ -7,7 +7,7 @@
  * modified, or distributed except according to those terms.
  */
 
-package javax.inject;
+package org.kavaproject.kavatouch.util.inject;
 
 /**
  * TODO

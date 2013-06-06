@@ -14,7 +14,7 @@ import org.kavaproject.kavatouch.corefoundation.CoreURL;
 import org.kavaproject.kavatouch.runtime.Factory;
 import org.kavaproject.kavatouch.util.NotImplementedException;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

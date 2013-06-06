@@ -16,7 +16,7 @@ import org.kavaproject.kavatouch.coregraphics.GraphicsPoint;
 import org.kavaproject.kavatouch.uikit.*;
 import org.kavaproject.kavatouch.util.ReverseIterable;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;

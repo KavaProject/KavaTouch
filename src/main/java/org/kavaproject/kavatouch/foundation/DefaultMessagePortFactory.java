@@ -12,7 +12,7 @@ package org.kavaproject.kavatouch.foundation;
 import org.kavaproject.kavatouch.corefoundation.CoreMessagePort;
 import org.kavaproject.kavatouch.util.NotImplementedException;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 import java.nio.ByteBuffer;
 
 public class DefaultMessagePortFactory extends PortBaseFactory implements MessagePortFactory {

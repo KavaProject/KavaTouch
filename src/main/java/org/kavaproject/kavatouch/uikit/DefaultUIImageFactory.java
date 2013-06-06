@@ -22,7 +22,7 @@ import org.kavaproject.kavatouch.internal.ImageScaleModifier;
 import org.kavaproject.kavatouch.uikit.staging.ProcessingImage;
 import org.kavaproject.kavatouch.util.NotImplementedException;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 import java.nio.ByteBuffer;
 import java.util.HashMap;
 import java.util.List;

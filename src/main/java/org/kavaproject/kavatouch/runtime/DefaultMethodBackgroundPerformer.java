@@ -11,7 +11,7 @@ package org.kavaproject.kavatouch.runtime;
 
 import org.kavaproject.kavatouch.foundation.FoundationThreadFactory;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 
 public class DefaultMethodBackgroundPerformer implements MethodBackgroundPerformer {
     private final FoundationThreadFactory mFoundationThreadFactory;

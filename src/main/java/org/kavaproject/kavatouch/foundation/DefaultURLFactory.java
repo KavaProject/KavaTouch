@@ -15,7 +15,7 @@ import org.kavaproject.kavatouch.foundation.staging.URLBookmarkFileCreationOptio
 import org.kavaproject.kavatouch.foundation.staging.URLBookmarkResolutionOptions;
 import org.kavaproject.kavatouch.util.NotImplementedException;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 import java.nio.ByteBuffer;
 import java.util.List;
 import java.util.Map;

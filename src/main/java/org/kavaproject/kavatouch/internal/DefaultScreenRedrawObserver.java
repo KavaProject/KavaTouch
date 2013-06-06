@@ -17,7 +17,7 @@ import org.kavaproject.kavatouch.corefoundation.CoreRunLoopActivity;
 import org.kavaproject.kavatouch.corefoundation.CoreRunLoopObserver;
 import org.kavaproject.kavatouch.uikit.UIApplication;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 import java.util.List;
 
 public class DefaultScreenRedrawObserver implements ScreenRedrawObserver {

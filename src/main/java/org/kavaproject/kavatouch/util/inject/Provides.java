@@ -7,15 +7,15 @@
  * modified, or distributed except according to those terms.
  */
 
-package javax.inject;
+package org.kavaproject.kavatouch.util.inject;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
-import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
-import static java.lang.annotation.RetentionPolicy.RUNTIME;
+import static java.lang.annotation.ElementType.*;
+import static java.lang.annotation.RetentionPolicy.*;
 
-@Target(ANNOTATION_TYPE)
+@Target(METHOD)
 @Retention(RUNTIME)
-public @interface Qualifier {
+public @interface Provides {
 }

@@ -12,7 +12,7 @@ package org.kavaproject.kavatouch.foundation;
 import org.kavaproject.kavatouch.corefoundation.CoreAbsoluteTime;
 import org.kavaproject.kavatouch.corefoundation.CoreDate;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 
 public class DefaultFoundationDateFactory implements FoundationDateFactory {
     @Inject

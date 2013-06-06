@@ -26,7 +26,7 @@ import org.kavaproject.kavatouch.foundation.NotificationCenter;
 import org.kavaproject.kavatouch.internal.*;
 import org.kavaproject.kavatouch.util.AssetUtil;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Map;

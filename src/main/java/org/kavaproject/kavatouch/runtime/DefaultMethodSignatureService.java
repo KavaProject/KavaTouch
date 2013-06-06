@@ -12,7 +12,7 @@ package org.kavaproject.kavatouch.runtime;
 import org.kavaproject.kavatouch.foundation.MethodSignature;
 import org.kavaproject.kavatouch.foundation.MethodSignatureFactory;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 
 public class DefaultMethodSignatureService implements MethodSignatureService {
     private final MethodResolver mMethodResolver;

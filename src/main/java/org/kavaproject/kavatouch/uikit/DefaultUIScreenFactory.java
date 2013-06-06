@@ -12,7 +12,7 @@ package org.kavaproject.kavatouch.uikit;
 import org.kavaproject.kavatouch.DeviceHandle;
 import org.kavaproject.kavatouch.foundation.NotificationCenter;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
 

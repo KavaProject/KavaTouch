@@ -11,7 +11,7 @@ package org.kavaproject.kavatouch.uikit;
 
 import org.kavaproject.kavatouch.runtime.MethodResolver;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 
 public class SimpleUIResponderFactory implements UIResponderFactory {
     private final MethodResolver mMethodResolver;

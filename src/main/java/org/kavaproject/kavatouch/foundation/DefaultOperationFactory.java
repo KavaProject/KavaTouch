@@ -9,7 +9,7 @@
 
 package org.kavaproject.kavatouch.foundation;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 
 public class DefaultOperationFactory implements OperationFactory {
     @Inject

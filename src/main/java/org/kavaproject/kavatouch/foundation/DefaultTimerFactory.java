@@ -13,7 +13,7 @@ import org.kavaproject.kavatouch.corefoundation.CoreRunLoopTimer;
 import org.kavaproject.kavatouch.runtime.MethodSignatureService;
 import org.kavaproject.kavatouch.runtime.SEL;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 
 public class DefaultTimerFactory implements TimerFactory {
     private final FoundationDateFactory mFoundationDateFactory;

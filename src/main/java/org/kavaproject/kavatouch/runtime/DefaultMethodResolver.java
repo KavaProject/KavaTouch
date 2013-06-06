@@ -9,7 +9,7 @@
 
 package org.kavaproject.kavatouch.runtime;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 import java.util.HashMap;
 import java.util.Map;
 

@@ -11,7 +11,7 @@ package org.kavaproject.kavatouch.uikit;
 
 import org.kavaproject.kavatouch.util.NotImplementedException;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 import java.util.Arrays;
 import java.util.List;
 

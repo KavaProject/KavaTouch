@@ -16,7 +16,7 @@ import org.kavaproject.kavatouch.dispatch.DispatchQueue;
 import org.kavaproject.kavatouch.foundation.*;
 import org.kavaproject.kavatouch.util.OutArg;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;

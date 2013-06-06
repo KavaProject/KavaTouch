@@ -14,7 +14,7 @@ import org.kavaproject.kavatouch.runtime.MethodPerformer;
 import org.kavaproject.kavatouch.runtime.SEL;
 import org.kavaproject.kavatouch.util.AndroidConversions;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;

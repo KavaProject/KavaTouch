@@ -16,7 +16,7 @@ import org.kavaproject.kavatouch.foundation.staging.PropertyListWriteOptions;
 import org.kavaproject.kavatouch.util.NotImplementedException;
 import org.kavaproject.kavatouch.util.OutArg;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.ByteBuffer;

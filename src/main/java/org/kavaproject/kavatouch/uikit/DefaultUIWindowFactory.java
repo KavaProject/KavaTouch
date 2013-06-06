@@ -16,7 +16,7 @@ import org.kavaproject.kavatouch.foundation.Coder;
 import org.kavaproject.kavatouch.foundation.NotificationCenter;
 import org.kavaproject.kavatouch.runtime.MethodResolver;
 
-import javax.inject.Inject;
+import org.kavaproject.kavatouch.util.inject.Inject;
 
 public class DefaultUIWindowFactory extends DefaultUIViewFactory implements UIWindowFactory {
     private final UIApplication mSharedApplication;
