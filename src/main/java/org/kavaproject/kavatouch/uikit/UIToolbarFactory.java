@@ -10,27 +10,23 @@
 package org.kavaproject.kavatouch.uikit;
 
 import org.kavaproject.kavatouch.coregraphics.GraphicsRect;
+import org.kavaproject.kavatouch.foundation.Coder;
 import org.kavaproject.kavatouch.internal.OccClass;
-import org.kavaproject.kavatouch.internal.OccInstanceMethod;
-import org.kavaproject.kavatouch.runtime.Factory;
 
-@OccClass("UIImageView")
-public interface UIImageViewFactory extends UIResponderFactory, UIViewFactory, Factory {
+@OccClass("UIToolbar")
+public interface UIToolbarFactory extends UIViewFactory {
     @Override
-    UIImageView create();
+    UIToolbar create();
 
     @Override
-    UIImageView create(GraphicsRect frame);
+    UIToolbar create(GraphicsRect frame);
 
     @Override
-    UIImageView appearance();
+    UIToolbar create(Coder coder);
 
     @Override
-    UIImageView appearance(UIAppearanceContainerFactory... containers);
+    UIToolbar appearance();
 
-    @OccInstanceMethod("initWithImage:")
-    UIImageView create(UIImage image);
-
-    @OccInstanceMethod("initWithImage:highlightedImage:")
-    UIImageView create(UIImage image, UIImage highlightedImage);
+    @Override
+    UIToolbar appearance(UIAppearanceContainerFactory... containers);
 }

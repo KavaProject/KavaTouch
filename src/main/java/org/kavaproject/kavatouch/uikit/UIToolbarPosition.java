@@ -9,17 +9,21 @@
 
 package org.kavaproject.kavatouch.uikit;
 
+import org.kavaproject.kavatouch.internal.CEnumConstant;
+import org.kavaproject.kavatouch.internal.CTypedef;
 import org.kavaproject.kavatouch.internal.Header;
-import org.kavaproject.kavatouch.internal.OccProtocol;
-import org.kavaproject.kavatouch.internal.OccProtocolClassMethod;
-import org.kavaproject.kavatouch.runtime.Factory;
 
-@Header(value = "UIAppearance")
-@OccProtocol(factory = true, value = "UIAppearance")
-public interface UIAppearanceFactory extends Factory {
-    @OccProtocolClassMethod("appearance")
-    Object appearance();
+@Header("UIToolbar")
+@CTypedef("UIToolbarPosition")
+public enum UIToolbarPosition {
+    @CEnumConstant(value = "UIToolbarPositionAny", constantValue = 0)
+    ANY(0),
+    @CEnumConstant(value = "UIToolbarPositionBottom", constantValue = 1)
+    BOTTOM(1),
+    @CEnumConstant(value = "UIToolbarPositionTop", constantValue = 2)
+    TOP(2);
 
-    @OccProtocolClassMethod("appearanceWhenContainedIn")
-    Object appearance(UIAppearanceContainerFactory... containers);
+    UIToolbarPosition(int value) {
+
+    }
 }

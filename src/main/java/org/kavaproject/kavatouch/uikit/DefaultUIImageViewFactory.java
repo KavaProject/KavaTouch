@@ -13,7 +13,6 @@ import org.kavaproject.kavatouch.coreanimation.AnimationLayerFactory;
 import org.kavaproject.kavatouch.coregraphics.GraphicsPoint;
 import org.kavaproject.kavatouch.coregraphics.GraphicsRect;
 import org.kavaproject.kavatouch.runtime.MethodResolver;
-import org.kavaproject.kavatouch.uikit.staging.UIImageViewAppearanceProxy;
 import org.kavaproject.kavatouch.util.NotImplementedException;
 
 import org.kavaproject.kavatouch.util.inject.Inject;
@@ -58,12 +57,12 @@ public class DefaultUIImageViewFactory extends DefaultUIViewFactory implements U
     }
 
     @Override
-    public UIImageViewAppearanceProxy appearance() {
+    public UIImageView appearance() {
         throw new NotImplementedException(); //TODO
     }
 
     @Override
-    public UIImageViewAppearanceProxy appearanceWhenContainedIn(UIAppearanceContainerFactory... containers) {
+    public UIImageView appearance(UIAppearanceContainerFactory... containers) {
         throw new NotImplementedException(); //TODO
     }
 

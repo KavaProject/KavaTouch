@@ -13,7 +13,6 @@ import org.kavaproject.kavatouch.coregraphics.GraphicsRect;
 import org.kavaproject.kavatouch.foundation.Coder;
 import org.kavaproject.kavatouch.internal.OccClass;
 import org.kavaproject.kavatouch.runtime.Factory;
-import org.kavaproject.kavatouch.uikit.staging.UILabelAppearanceProxy;
 
 @OccClass("UILabel")
 public interface UILabelFactory extends UIResponderFactory, UIViewFactory, Factory {
@@ -24,10 +23,10 @@ public interface UILabelFactory extends UIResponderFactory, UIViewFactory, Facto
     UILabel create(GraphicsRect frame);
 
     @Override
-    UILabelAppearanceProxy appearance();
+    UILabel appearance();
 
     @Override
-    UILabelAppearanceProxy appearanceWhenContainedIn(UIAppearanceContainerFactory... containers);
+    UILabel appearance(UIAppearanceContainerFactory... containers);
 
     @Override
     UILabel create(Coder decoder);

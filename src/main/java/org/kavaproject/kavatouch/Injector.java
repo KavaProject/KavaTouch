@@ -114,8 +114,8 @@ public class Injector {
 
     public MethodDispatcher injectMethodDispatcher() {
         if (mMethodDispatcher == null) {
-            mMethodDispatcher = mRuntimeModule.provideMethodDispatcher(injectMethodResolver(),
-                    injectFactoryRegistry(), injectFoundationExceptionFactory(), injectMethodSignatureFactory());
+            mMethodDispatcher = mRuntimeModule.provideMethodDispatcher(injectMethodResolver(), injectFactoryRegistry
+                    (), injectFoundationExceptionFactory(), injectMethodSignatureFactory());
         }
         return mMethodDispatcher;
     }
@@ -158,8 +158,8 @@ public class Injector {
 
     public TimerFactory injectTimerFactory() {
         if (mTimerFactory == null) {
-            mTimerFactory = mFoundationModule.provideTimerFactory(injectFoundationDateFactory(),
-                    injectRunLoopFactory(), injectInvocationFactory(), injectMethodSignatureService());
+            mTimerFactory = mFoundationModule.provideTimerFactory(injectFoundationDateFactory(), injectRunLoopFactory
+                    (), injectInvocationFactory(), injectMethodSignatureService());
         }
         return mTimerFactory;
     }
@@ -212,9 +212,9 @@ public class Injector {
 
     public UILabelFactory injectUILabelFactory() {
         if (mUILabelFactory == null) {
-            mUILabelFactory = mUIKitModule.provideUILabelFactory(injectUIFontFactory(),
-                    injectAnimationLayerFactory(), injectUIGraphics(), injectUIColorFactory(), injectMainScreen(),
-                    injectMethodResolver(), injectDeviceHandle());
+            mUILabelFactory = mUIKitModule.provideUILabelFactory(injectUIFontFactory(), injectAnimationLayerFactory()
+                    , injectUIGraphics(), injectUIColorFactory(), injectMainScreen(), injectMethodResolver(),
+                    injectDeviceHandle());
         }
         return mUILabelFactory;
     }
@@ -227,7 +227,7 @@ public class Injector {
         return mUIColorFactory;
     }
 
-    private DeviceHandle injectDeviceHandle() {
+    public DeviceHandle injectDeviceHandle() {
         return mDeviceHandle;
     }
 

@@ -10,27 +10,18 @@
 package org.kavaproject.kavatouch.uikit;
 
 import org.kavaproject.kavatouch.coregraphics.GraphicsRect;
+import org.kavaproject.kavatouch.foundation.Coder;
+import org.kavaproject.kavatouch.foundation.CodingFactory;
 import org.kavaproject.kavatouch.internal.OccClass;
-import org.kavaproject.kavatouch.internal.OccInstanceMethod;
-import org.kavaproject.kavatouch.runtime.Factory;
 
-@OccClass("UIImageView")
-public interface UIImageViewFactory extends UIResponderFactory, UIViewFactory, Factory {
+@OccClass("UINavigationBar")
+public interface UINavigationBarFactory extends UIViewFactory, CodingFactory {
     @Override
-    UIImageView create();
+    UINavigationBar create();
 
     @Override
-    UIImageView create(GraphicsRect frame);
+    UINavigationBar create(GraphicsRect frame);
 
     @Override
-    UIImageView appearance();
-
-    @Override
-    UIImageView appearance(UIAppearanceContainerFactory... containers);
-
-    @OccInstanceMethod("initWithImage:")
-    UIImageView create(UIImage image);
-
-    @OccInstanceMethod("initWithImage:highlightedImage:")
-    UIImageView create(UIImage image, UIImage highlightedImage);
+    UINavigationBar create(Coder decoder);
 }

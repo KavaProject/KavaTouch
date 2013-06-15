@@ -14,9 +14,7 @@ import org.kavaproject.kavatouch.coreanimation.AnimationLayerFactory;
 import org.kavaproject.kavatouch.coregraphics.GraphicsRect;
 import org.kavaproject.kavatouch.foundation.Coder;
 import org.kavaproject.kavatouch.runtime.MethodResolver;
-import org.kavaproject.kavatouch.uikit.staging.UILabelAppearanceProxy;
 import org.kavaproject.kavatouch.util.NotImplementedException;
-
 import org.kavaproject.kavatouch.util.inject.Inject;
 
 public class AndroidUILabelFactory extends DefaultUIViewFactory implements UILabelFactory {
@@ -44,12 +42,12 @@ public class AndroidUILabelFactory extends DefaultUIViewFactory implements UILab
     }
 
     @Override
-    public UILabelAppearanceProxy appearance() {
+    public UILabel appearance() {
         throw new NotImplementedException(); //TODO
     }
 
     @Override
-    public UILabelAppearanceProxy appearanceWhenContainedIn(UIAppearanceContainerFactory... containers) {
+    public UILabel appearance(UIAppearanceContainerFactory... containers) {
         throw new NotImplementedException(); //TODO
     }
 

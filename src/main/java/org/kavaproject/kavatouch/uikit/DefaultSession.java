@@ -90,7 +90,7 @@ public class DefaultSession implements Session {
 
     private void initBundle() {
         //copy main bundle to accessible location
-        Context context = mDeviceHandle.getContext();
+        Context context = mDeviceHandle.getCompositorContext();
         String appBundleName;
         PackageManager p = context.getPackageManager();
         ApplicationInfo info = context.getApplicationInfo();

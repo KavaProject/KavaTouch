@@ -19,9 +19,7 @@ import org.kavaproject.kavatouch.runtime.SEL;
 import org.kavaproject.kavatouch.uikit.staging.UIViewAnimationCurve;
 import org.kavaproject.kavatouch.uikit.staging.UIViewAnimationOptions;
 import org.kavaproject.kavatouch.uikit.staging.UIViewAnimationTransition;
-import org.kavaproject.kavatouch.uikit.staging.UIViewAppearanceProxy;
 import org.kavaproject.kavatouch.util.NotImplementedException;
-
 import org.kavaproject.kavatouch.util.inject.Inject;
 
 public class DefaultUIViewFactory extends SimpleUIResponderFactory implements UIViewFactory {
@@ -165,12 +163,12 @@ public class DefaultUIViewFactory extends SimpleUIResponderFactory implements UI
     }
 
     @Override
-    public UIViewAppearanceProxy appearance() {
+    public UIView appearance() {
         throw new NotImplementedException(); //TODO
     }
 
     @Override
-    public UIViewAppearanceProxy appearanceWhenContainedIn(UIAppearanceContainerFactory... containers) {
+    public UIView appearance(UIAppearanceContainerFactory... containers) {
         throw new NotImplementedException(); //TODO
     }
 

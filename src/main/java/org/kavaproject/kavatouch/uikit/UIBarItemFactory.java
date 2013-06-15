@@ -7,10 +7,16 @@
  * modified, or distributed except according to those terms.
  */
 
-package org.kavaproject.kavatouch.uikit.staging;
+package org.kavaproject.kavatouch.uikit;
 
-/**
- * TODO
- */
-public interface UILabelAppearanceProxy extends UIViewAppearanceProxy {
+import org.kavaproject.kavatouch.internal.OccClass;
+import org.kavaproject.kavatouch.runtime.Factory;
+
+@OccClass("UIBarItem")
+public interface UIBarItemFactory extends Factory, UIAppearanceFactory {
+    @Override
+    UIBarItem appearance();
+
+    @Override
+    UIBarItem appearance(UIAppearanceContainerFactory... containers);
 }

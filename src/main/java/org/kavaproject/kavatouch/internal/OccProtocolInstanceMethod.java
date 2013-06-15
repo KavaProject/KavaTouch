@@ -16,4 +16,6 @@ public @interface OccProtocolInstanceMethod {
     String value();
 
     String tokenGroup() default "";
+
+    boolean required() default false;
 }

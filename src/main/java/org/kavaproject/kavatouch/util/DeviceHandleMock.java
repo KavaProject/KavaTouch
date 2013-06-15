@@ -36,7 +36,7 @@ public class DeviceHandleMock implements DeviceHandle {
     }
 
     @Override
-    public Context getContext() {
+    public Context getCompositorContext() {
         throw new UnsupportedOperationException();
     }
 

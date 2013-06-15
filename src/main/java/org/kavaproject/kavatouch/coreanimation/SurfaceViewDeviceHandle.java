@@ -73,7 +73,7 @@ class SurfaceViewDeviceHandle implements DeviceHandle {
     }
 
     @Override
-    public Context getContext() {
+    public Context getCompositorContext() {
         return mSurfaceView.getContext();
     }
 

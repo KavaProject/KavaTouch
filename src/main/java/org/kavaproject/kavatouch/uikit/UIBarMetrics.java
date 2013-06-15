@@ -7,10 +7,17 @@
  * modified, or distributed except according to those terms.
  */
 
-package org.kavaproject.kavatouch.uikit.staging;
+package org.kavaproject.kavatouch.uikit;
 
-/**
- * TODO
- */
-public interface UIImageViewAppearanceProxy extends UIViewAppearanceProxy {
+import org.kavaproject.kavatouch.internal.CEnumConstant;
+import org.kavaproject.kavatouch.internal.CTypedef;
+import org.kavaproject.kavatouch.internal.Header;
+
+@Header("UIBarButtonItem")
+@CTypedef("UIBarMetrics")
+public enum  UIBarMetrics {
+    @CEnumConstant("UIBarMetricsDefault")
+    DEFAULT,
+    @CEnumConstant("UIBarMetricsLandscapePhone")
+    LANDSCAPE_PHONE
 }

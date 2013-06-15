@@ -11,6 +11,7 @@ package org.kavaproject.kavatouch.uikit;
 
 import org.kavaproject.kavatouch.coreanimation.AnimationLayerFactory;
 import org.kavaproject.kavatouch.coregraphics.GraphicsRect;
+import org.kavaproject.kavatouch.foundation.Coder;
 import org.kavaproject.kavatouch.foundation.CodingFactory;
 import org.kavaproject.kavatouch.foundation.FoundationDate;
 import org.kavaproject.kavatouch.internal.OccClass;
@@ -36,6 +37,9 @@ public interface UIViewFactory extends UIResponderFactory, UIAppearanceContainer
 
     @OccInstanceMethod("initWithFrame:")
     UIView create(GraphicsRect frame);
+
+    @Override
+    UIView create(Coder coder);
 
     @OccClassMethod("layerClass")
     AnimationLayerFactory layerFactory();
@@ -105,4 +109,10 @@ public interface UIViewFactory extends UIResponderFactory, UIAppearanceContainer
 
     @OccClassMethod("areAnimationsEnabled")
     boolean areAnimationsEnabled();
+
+    @Override
+    UIView appearance();
+
+    @Override
+    UIView appearance(UIAppearanceContainerFactory... containers);
 }

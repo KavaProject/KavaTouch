@@ -18,8 +18,6 @@ import org.kavaproject.kavatouch.runtime.Factory;
 @Header("NSObject")
 @OccProtocol("NSCoding")
 public interface CodingFactory extends Factory {
-
     @OccProtocolInstanceMethod("initWithCoder:")
     Creatable create(Coder decoder);
-
 }

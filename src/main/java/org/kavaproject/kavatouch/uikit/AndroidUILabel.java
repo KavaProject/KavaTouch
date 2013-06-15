@@ -63,7 +63,7 @@ public class AndroidUILabel extends DefaultUIView implements UILabel {
         mFont = mUIFontFactory.systemFontOfSize(17);
         getLayer().setName("UILabel");
         getLayer().setContentsScale(mainScreen.getScale());
-        mTextView = new TextView(deviceHandle.getContext()); //TODO This takes way too long
+        mTextView = new TextView(deviceHandle.getCompositorContext()); //TODO This takes way too long
         mTextView.setEnabled(true);
         mTextView.setTextColor(Color.WHITE);
         mTextView.setIncludeFontPadding(false);

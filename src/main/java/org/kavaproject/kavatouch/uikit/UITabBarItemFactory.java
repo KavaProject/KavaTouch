@@ -9,28 +9,20 @@
 
 package org.kavaproject.kavatouch.uikit;
 
-import org.kavaproject.kavatouch.coregraphics.GraphicsRect;
 import org.kavaproject.kavatouch.internal.OccClass;
 import org.kavaproject.kavatouch.internal.OccInstanceMethod;
-import org.kavaproject.kavatouch.runtime.Factory;
 
-@OccClass("UIImageView")
-public interface UIImageViewFactory extends UIResponderFactory, UIViewFactory, Factory {
-    @Override
-    UIImageView create();
+@OccClass("UITabBarItem")
+public interface UITabBarItemFactory extends UIBarItemFactory {
+    @OccInstanceMethod("initWithTabBarSystemItem:tag:")
+    UITabBarItem create(UITabBarSystemItem systemItem, int tag);
 
-    @Override
-    UIImageView create(GraphicsRect frame);
-
-    @Override
-    UIImageView appearance();
+    @OccInstanceMethod("initWithTitle:image:tag:")
+    UITabBarItem create(String title, UIImage image, int tag);
 
     @Override
-    UIImageView appearance(UIAppearanceContainerFactory... containers);
+    UITabBarItem appearance();
 
-    @OccInstanceMethod("initWithImage:")
-    UIImageView create(UIImage image);
-
-    @OccInstanceMethod("initWithImage:highlightedImage:")
-    UIImageView create(UIImage image, UIImage highlightedImage);
+    @Override
+    UITabBarItem appearance(UIAppearanceContainerFactory... containers);
 }

@@ -9,17 +9,18 @@
 
 package org.kavaproject.kavatouch.uikit;
 
+import org.kavaproject.kavatouch.foundation.Coder;
+import org.kavaproject.kavatouch.foundation.CodingFactory;
 import org.kavaproject.kavatouch.internal.Header;
-import org.kavaproject.kavatouch.internal.OccProtocol;
-import org.kavaproject.kavatouch.internal.OccProtocolClassMethod;
-import org.kavaproject.kavatouch.runtime.Factory;
+import org.kavaproject.kavatouch.internal.OccClass;
+import org.kavaproject.kavatouch.internal.OccInstanceMethod;
 
-@Header(value = "UIAppearance")
-@OccProtocol(factory = true, value = "UIAppearance")
-public interface UIAppearanceFactory extends Factory {
-    @OccProtocolClassMethod("appearance")
-    Object appearance();
+@Header("UINavigationBar")
+@OccClass("UINavigationItem")
+public interface UINavigationItemFactory extends CodingFactory {
+    @OccInstanceMethod("initWithTitle:")
+    UINavigationItem create(String title);
 
-    @OccProtocolClassMethod("appearanceWhenContainedIn")
-    Object appearance(UIAppearanceContainerFactory... containers);
+    @Override
+    UINavigationItem create(Coder decoder);
 }

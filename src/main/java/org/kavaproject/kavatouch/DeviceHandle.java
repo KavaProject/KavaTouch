@@ -20,7 +20,7 @@ public interface DeviceHandle {
 
     void setOnTouchListener(View.OnTouchListener onTouchListener);
 
-    Context getContext();
+    Context getCompositorContext();
 
     float getScale();
 
