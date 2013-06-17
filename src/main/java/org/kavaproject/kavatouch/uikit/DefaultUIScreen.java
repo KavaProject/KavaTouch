@@ -46,8 +46,8 @@ public class DefaultUIScreen implements UIScreen, DeviceHandle.Observer {
     @Override
     public void onDeviceConfigurationChanged() {
         mScale = mDeviceHandle.getScale();
-        GraphicsRect rect = mDeviceHandle.getScreenRect();
-        mBounds = new GraphicsRect(0, 0, rect.getWidth() / mScale, rect.getHeight() / mScale);
+        mBounds = new GraphicsRect(0, 0, mDeviceHandle.getScreenWidthPx() / mScale,
+                mDeviceHandle.getScreenHeightPx() / mScale);
         Map userInfo = getCurrentMode() != null ? Collections.singletonMap("_previousMode", getCurrentMode()) : null;
         mOnlyMode = mUIScreenModeFactory.create(mBounds.size, 1);
         mDefaultNotificationCenter.postNotificationName(NOTIFICATION_MODE_DID_CHANGE, this, userInfo);
@@ -63,8 +63,7 @@ public class DefaultUIScreen implements UIScreen, DeviceHandle.Observer {
 
     @Override
     public GraphicsRect getApplicationFrame() {
-//        float statusBarHeight = mSharedApplication.isStatusBarHidden() ? 0 : 20;
-        float statusBarHeight = mDeviceHandle.getStatusBarHeight() / mScale;
+        float statusBarHeight = mDeviceHandle.getStatusBarHeightPx() / mScale;
         GraphicsSize size = getBounds().size;
         return new GraphicsRect(0, statusBarHeight, size.width, size.height - statusBarHeight);
     }

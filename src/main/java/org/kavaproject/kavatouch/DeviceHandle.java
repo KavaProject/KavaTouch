@@ -3,8 +3,6 @@ package org.kavaproject.kavatouch;
 import android.content.Context;
 import android.view.View;
 import org.kavaproject.kavatouch.coreanimation.AnimationEngine;
-import org.kavaproject.kavatouch.coregraphics.GraphicsPoint;
-import org.kavaproject.kavatouch.coregraphics.GraphicsRect;
 import org.kavaproject.kavatouch.internal.ImageScaleModifier;
 
 import java.util.List;
@@ -12,11 +10,7 @@ import java.util.List;
 public interface DeviceHandle {
     void addObserver(Observer defaultUIScreen);
 
-    GraphicsRect getScreenRect();
-
     AnimationEngine getAnimationEngine();
-
-    GraphicsPoint getScreenOffset();
 
     void setOnTouchListener(View.OnTouchListener onTouchListener);
 
@@ -32,7 +26,15 @@ public interface DeviceHandle {
 
     List<String> getDeviceModifiers();
 
-    int getStatusBarHeight();
+    int getStatusBarHeightPx();
+
+    int getActionBarHeightPx();
+
+    int getSurfaceHeightPx();
+
+    int getScreenWidthPx();
+
+    int getScreenHeightPx();
 
     public interface Observer {
         void onDeviceConfigurationChanged();

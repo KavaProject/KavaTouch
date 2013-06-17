@@ -33,7 +33,6 @@ public class DefaultMotionEventHandler implements MotionEventHandler {
     private UITouch[] mCurrentTouches = new UITouch[10];
     private double[] mDownTimestamps = new double[10];
     private float mScale;
-    private GraphicsPoint mScreenOffset;
 
     @Inject
     protected DefaultMotionEventHandler(UITouchFactory uiTouchFactory, UIEventFactory uiEventFactory,
@@ -55,7 +54,6 @@ public class DefaultMotionEventHandler implements MotionEventHandler {
     @Override
     public void dispatch(List<MotionEvent> motionEvents) {
         mScale = mMainScreen.getScale();
-        mScreenOffset = mDeviceHandle.getScreenOffset();
         MotionEvent moveEvent = null;
         for (MotionEvent motionEvent : motionEvents) {
             int action = (motionEvent.getAction() & MotionEvent.ACTION_MASK);
@@ -118,11 +116,12 @@ public class DefaultMotionEventHandler implements MotionEventHandler {
         UITouch currentTouch = null;
         GraphicsPoint currentLocation = null;
         boolean touchWasActive = false;
+        int screenOffset = mDeviceHandle.getScreenHeightPx() - mDeviceHandle.getSurfaceHeightPx();
         if (pointerIndex <= MAX_POINT_CNT - 1) {
             for (int i = 0; i < pointCnt; i++) {
                 int id = motionEvent.getPointerId(i);
-                GraphicsPoint location = new GraphicsPoint((motionEvent.getX(i) + mScreenOffset.x) / mScale,
-                        (motionEvent.getY(i) + mScreenOffset.y) / mScale);
+                GraphicsPoint location = new GraphicsPoint(motionEvent.getX(i) / mScale,
+                        (motionEvent.getY(i) + screenOffset) / mScale);
                 UITouch touch = mCurrentTouches[id];
                 //TODO Implement multi-touch and remove null check
                 if (touch == null) {

@@ -3,14 +3,13 @@ package org.kavaproject.kavatouch.coreanimation;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.PixelFormat;
-import android.graphics.Rect;
+import android.util.TypedValue;
+import android.view.Display;
 import android.view.SurfaceHolder;
 import android.view.View;
-import android.view.Window;
+import android.view.WindowManager;
 import org.kavaproject.R;
 import org.kavaproject.kavatouch.DeviceHandle;
-import org.kavaproject.kavatouch.coregraphics.GraphicsPoint;
-import org.kavaproject.kavatouch.coregraphics.GraphicsRect;
 import org.kavaproject.kavatouch.internal.ImageScaleModifier;
 import org.kavaproject.kavatouch.internal.JSONDeviceConfiguration;
 
@@ -18,34 +17,38 @@ import java.util.List;
 
 class SurfaceViewDeviceHandle implements DeviceHandle {
     private final SurfaceViewAnimationEngine mSurfaceView;
-    private final GraphicsRect mScreenRect;
-    //    private final int mTitleBarHeight;
-    private final int mStatusBarHeight;
     private final JSONDeviceConfiguration mJSONConfiguration;
-    private final GraphicsPoint mScreenOffset;
+    private final int mStatusBarHeight;
+    private final int mActionBarHeight;
+    private final int mScreenWidth;
+    private final int mScreenHeight;
 
     public SurfaceViewDeviceHandle(Activity activity, SurfaceViewAnimationEngine surfaceView) {
         mSurfaceView = surfaceView;
-        Rect visibleDisplayFrame = new Rect();
-        Window window = activity.getWindow();
-        window.getDecorView().getWindowVisibleDisplayFrame(visibleDisplayFrame);
-        mStatusBarHeight = visibleDisplayFrame.top;
-//        int contentViewTop = window.findViewById(Window.ID_ANDROID_CONTENT).getTop();
-//        mTitleBarHeight = contentViewTop - mStatusBarHeight;
-//        Display display = ((WindowManager) activity.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
-//        int width = display.getWidth();
-//        int height = display.getHeight();
-//        int[] location = new int[2];
-//        mSurfaceView.getLocationOnScreen(location);
-//        mScreenOffset = new GraphicsPoint(location[0], location[1]);
-//        mScreenOffset = new GraphicsPoint(0, mStatusBarHeight + mTitleBarHeight);
-//        mScreenRect = new GraphicsRect(0, 0, width, height);
-        mScreenOffset = new GraphicsPoint(0, mStatusBarHeight);
-        mScreenRect = new GraphicsRect(0, 0, surfaceView.getMeasuredWidth(), surfaceView.getMeasuredHeight() +
-                mStatusBarHeight);
+        mStatusBarHeight = getStatusBarHeight(activity);
+        mActionBarHeight = getActionBarHeight(activity);
+        Display display = ((WindowManager) activity.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
+        mScreenWidth = display.getWidth();
+        mScreenHeight = display.getHeight();
         mJSONConfiguration = new JSONDeviceConfiguration(activity.getResources(), R.raw.kava_device_configuration);
         SurfaceHolder holder = surfaceView.getHolder();
         holder.setFormat(PixelFormat.RGBA_8888);
+    }
+
+    private static int getStatusBarHeight(Activity activity) {
+        int result = 0;
+        int resourceId = activity.getResources().getIdentifier("status_bar_height", "dimen", "android");
+        if (resourceId > 0) {
+            result = activity.getResources().getDimensionPixelSize(resourceId);
+        }
+        return result;
+    }
+
+    private static int getActionBarHeight(Activity activity) {
+        TypedValue typeValue = new TypedValue();
+        int actionBarSizeId = activity.getResources().getIdentifier("actionBarSize", "attr", activity.getPackageName());
+        activity.getTheme().resolveAttribute(actionBarSizeId, typeValue, true);
+        return TypedValue.complexToDimensionPixelSize(typeValue.data, activity.getResources().getDisplayMetrics());
     }
 
     @Override
@@ -53,18 +56,18 @@ class SurfaceViewDeviceHandle implements DeviceHandle {
     }
 
     @Override
-    public GraphicsRect getScreenRect() {
-        return mScreenRect;
+    public int getScreenWidthPx() {
+        return mScreenWidth;
+    }
+
+    @Override
+    public int getScreenHeightPx() {
+        return mScreenHeight;
     }
 
     @Override
     public AnimationEngine getAnimationEngine() {
         return mSurfaceView;
-    }
-
-    @Override
-    public GraphicsPoint getScreenOffset() {
-        return mScreenOffset;
     }
 
     @Override
@@ -98,7 +101,17 @@ class SurfaceViewDeviceHandle implements DeviceHandle {
     }
 
     @Override
-    public int getStatusBarHeight() {
+    public int getStatusBarHeightPx() {
         return mStatusBarHeight;
+    }
+
+    @Override
+    public int getActionBarHeightPx() {
+        return mActionBarHeight;
+    }
+
+    @Override
+    public int getSurfaceHeightPx() {
+        return mSurfaceView.getMeasuredHeight();
     }
 }

@@ -46,7 +46,7 @@ public class AndroidUILabel extends DefaultUIView implements UILabel {
     private boolean mInteractionEnabled;
     private UIColor mBackgroundColor;
 
-    public AndroidUILabel(Coder decoder, UILabelFactory uiLabelFactory, UIFontFactory uiFontFactory,
+    protected AndroidUILabel(Coder decoder, UILabelFactory uiLabelFactory, UIFontFactory uiFontFactory,
                           UIGraphics uiGraphics, UIColorFactory uiColorFactory, UIScreen mainScreen,
                           MethodResolver methodResolver, DeviceHandle deviceHandle) {
         super(decoder, uiLabelFactory, uiGraphics, uiColorFactory, mainScreen, methodResolver);

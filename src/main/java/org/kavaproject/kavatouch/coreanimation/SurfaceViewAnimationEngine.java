@@ -18,10 +18,7 @@ import android.graphics.Rect;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import org.kavaproject.kavatouch.DeviceHandle;
-import org.kavaproject.kavatouch.coregraphics.GraphicsContext;
-import org.kavaproject.kavatouch.coregraphics.GraphicsPoint;
-import org.kavaproject.kavatouch.coregraphics.GraphicsRect;
-import org.kavaproject.kavatouch.coregraphics.GraphicsSize;
+import org.kavaproject.kavatouch.coregraphics.*;
 import org.kavaproject.kavatouch.uikit.Session;
 import org.kavaproject.kavatouch.uikit.UIApplicationDelegate;
 import org.kavaproject.kavatouch.util.NotImplementedException;
@@ -125,30 +122,31 @@ public abstract class SurfaceViewAnimationEngine extends SurfaceView implements 
             }
             float scale = mDeviceHandle.getScale();
             mRenderLock.lock();
-            GraphicsSize size = mRenderTree.getBounds().size;
-            GraphicsRect invalidRect = new GraphicsRect(0, 0, size.width * scale, size.height * scale);
-            invalidRect = invalidRect.integral();
-            Rect invalidRectAndroid = new Rect((int) invalidRect.origin.x, (int) invalidRect.origin.y,
-                    (int) invalidRect.size.width, (int) invalidRect.size.height);
+            GraphicsRect windowFramePx = mRenderTree.getFrame();
+            windowFramePx = GraphicsAffineTransform.makeScale(scale, scale).transformRect(windowFramePx);
+            windowFramePx = windowFramePx.integral();
+            float windowHeightPx = windowFramePx.size.height;
+            Rect rect = new Rect((int) windowFramePx.origin.x, (int) windowFramePx.origin.y,
+                    (int) windowFramePx.size.width, (int) windowFramePx.size.height);
             Canvas canvas = null;
             try {
-                canvas = getHolder().lockCanvas(invalidRectAndroid);
+                canvas = getHolder().lockCanvas(rect);
                 if (canvas == null) {
                     return;
                 }
-                int height = getHolder().getSurfaceFrame().height();
                 int saveCount = canvas.getSaveCount();
-                GraphicsPoint screenOffset = mDeviceHandle.getScreenOffset();
                 canvas.save();
-                canvas.translate(-screenOffset.x, -screenOffset.y);
+                int screenHeightPx = mDeviceHandle.getScreenHeightPx();
+                int surfaceHeightPx = mDeviceHandle.getSurfaceHeightPx();
+                canvas.translate(0, surfaceHeightPx - screenHeightPx);
                 //Quartz' default coordinate system is flipped compared to Androids.
-                canvas.translate(0, height);
+                canvas.translate(0, windowHeightPx);
                 canvas.scale(1, -1);
                 GraphicsContext context = GraphicsContext.Internal.create(canvas);
                 //And iOS flips it again
                 if (mDeviceHandle.getFlipYAxis()) {
                     context.scaleCTM(1, -1);
-                    context.translateCTM(0, height / scale);
+                    context.translateCTM(0, windowHeightPx / scale);
                 }
                 context.scaleCTM(scale, scale);
                 mRenderTree.render(context);

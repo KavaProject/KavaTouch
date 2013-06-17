@@ -4,8 +4,6 @@ import android.content.Context;
 import android.view.View;
 import org.kavaproject.kavatouch.DeviceHandle;
 import org.kavaproject.kavatouch.coreanimation.AnimationEngine;
-import org.kavaproject.kavatouch.coregraphics.GraphicsPoint;
-import org.kavaproject.kavatouch.coregraphics.GraphicsRect;
 import org.kavaproject.kavatouch.internal.ImageScaleModifier;
 
 import java.util.Collections;
@@ -17,18 +15,8 @@ public class DeviceHandleMock implements DeviceHandle {
     }
 
     @Override
-    public GraphicsRect getScreenRect() {
-        return GraphicsRect.ZERO;
-    }
-
-    @Override
     public AnimationEngine getAnimationEngine() {
         return null;
-    }
-
-    @Override
-    public GraphicsPoint getScreenOffset() {
-        return GraphicsPoint.ZERO;
     }
 
     @Override
@@ -66,7 +54,27 @@ public class DeviceHandleMock implements DeviceHandle {
     }
 
     @Override
-    public int getStatusBarHeight() {
+    public int getStatusBarHeightPx() {
+        return 0;
+    }
+
+    @Override
+    public int getActionBarHeightPx() {
+        return 72;
+    }
+
+    @Override
+    public int getSurfaceHeightPx() {
+        return 0;
+    }
+
+    @Override
+    public int getScreenWidthPx() {
+        return 0;
+    }
+
+    @Override
+    public int getScreenHeightPx() {
         return 0;
     }
 }
