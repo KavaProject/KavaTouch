@@ -41,4 +41,4 @@ Pull requests are welcome. If you find bugs or want certain features to be prior
 
 The [tutorial](https://github.com/KavaProject/KavaTouch/wiki/tutorial) (TODO) and the [wiki](https://github.com/KavaProject/KavaTouch/wiki) are good starting points. See also http://www.kavaproject.org/ for general information about projects that use or extend Kava Touch.
 
-If you have questions, post a message to the [forum](http://kava-touch.14305.n7.nabble.com).
+If you have questions, post a message to the [forum](http://kavatouch.1110247.n5.nabble.com).
